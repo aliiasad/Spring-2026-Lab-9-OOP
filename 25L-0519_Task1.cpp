@@ -48,15 +48,15 @@ ProjectManager ProjectManager :: operator+(const ProjectManager& dummy)   {
     return temp;
 }
 
-int ProjectManager::operator-(const ProjectManager& dummy) {
+int ProjectManager :: operator-(const ProjectManager& dummy) {
     return completedProjects - dummy.completedProjects;
 }
 
-int ProjectManager::operator*(const ProjectManager& dummy) {
+int ProjectManager :: operator*(const ProjectManager& dummy) {
     return completedProjects * dummy.completedProjects;
 }
 
-int ProjectManager::operator/(const ProjectManager& dummy) {
+int ProjectManager :: operator/(const ProjectManager& dummy) {
     if (dummy.completedProjects == 0) {
         cout << "Error: Division by zero." << endl;
         return 0;
@@ -76,7 +76,7 @@ ProjectManager& ProjectManager :: operator--()  {
     return *this;
 }
 
-int ProjectManager::efficiency(const ProjectManager& dummy) {
+int ProjectManager :: efficiency(const ProjectManager& dummy) {
     if (dummy.completedProjects == 0) {
         cout << "Error: Division by zero." << endl;
         return 0;
@@ -91,7 +91,7 @@ void ProjectManager :: display()    {
 }
 
 int main()  {
-     ProjectManager A("Manager A", 10);
+    ProjectManager A("Manager A", 10);
     ProjectManager B("Manager B", 5);
 
     ++A;

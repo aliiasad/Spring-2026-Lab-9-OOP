@@ -115,7 +115,7 @@ bool operator>(const ProjectManager& dummy1, const ProjectManager& dummy2) {
 }
 
 // task 5
-ProjectManager& ProjectManager::operator=(const ProjectManager& dummy) {
+ProjectManager& ProjectManager :: operator=(const ProjectManager& dummy) {
     if (this != &dummy) {
         name = dummy.name;
         completedProjects = dummy.completedProjects;
@@ -124,12 +124,12 @@ ProjectManager& ProjectManager::operator=(const ProjectManager& dummy) {
     return *this;
 }
 
-ProjectManager& ProjectManager::operator+=(const ProjectManager& dummy) {
+ProjectManager& ProjectManager :: operator+=(const ProjectManager& dummy) {
     completedProjects += dummy.completedProjects;
     return *this;
 }
 
-ProjectManager& ProjectManager::operator-=(const ProjectManager& dummy) {
+ProjectManager& ProjectManager :: operator-=(const ProjectManager& dummy) {
     completedProjects -= dummy.completedProjects;
     if (completedProjects < 0)
         completedProjects = 0;
